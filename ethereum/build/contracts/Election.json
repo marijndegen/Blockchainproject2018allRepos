@@ -1,0 +1,472 @@
+{
+  "contractName": "Election",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "candidatesCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidates",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "voteCount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610224806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632d35a8a2146100515780633477ee2e1461007c575b600080fd5b34801561005d57600080fd5b50610066610130565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100a760048036038101908080359060200190929190505050610136565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100f35780820151818401526020810190506100d8565b50505050905090810190601f1680156101205780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101e85780601f106101bd576101008083540402835291602001916101e8565b820191906000526020600020905b8154815290600101906020018083116101cb57829003601f168201915b50505050509080600201549050835600a165627a7a72305820ea6e2551a6982c344a741882735a2634d5cf49475edd1f4145d4bc14a51a3a580029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632d35a8a2146100515780633477ee2e1461007c575b600080fd5b34801561005d57600080fd5b50610066610130565b6040518082815260200191505060405180910390f35b34801561008857600080fd5b506100a760048036038101908080359060200190929190505050610136565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156100f35780820151818401526020810190506100d8565b50505050905090810190601f1680156101205780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b60015481565b6000602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101e85780601f106101bd576101008083540402835291602001916101e8565b820191906000526020600020905b8154815290600101906020018083116101cb57829003601f168201915b50505050509080600201549050835600a165627a7a72305820ea6e2551a6982c344a741882735a2634d5cf49475edd1f4145d4bc14a51a3a580029",
+  "sourceMap": "25:179:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:179:1;;;;;;;",
+  "deployedSourceMap": "25:179:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;173:27:1;;;;;;;;;;;;;;;;;;;;;;;124:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;124:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;124:44:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;173:27;;;;:::o;124:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.2;\n\ncontract Election {\n\n  struct Candidate {\n    uint id;\n    string name;\n    uint voteCount;\n  }\n\n  mapping(uint => Candidate) public candidates;\n\n  uint public candidatesCount;\n\n}\n",
+  "sourcePath": "/Users/khiempham/Project/ethereum-master/ethereum/contracts/Election.sol",
+  "ast": {
+    "absolutePath": "/Users/khiempham/Project/ethereum-master/ethereum/contracts/Election.sol",
+    "exportedSymbols": {
+      "Election": [
+        783
+      ]
+    },
+    "id": 784,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 769,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 783,
+        "linearizedBaseContracts": [
+          783
+        ],
+        "name": "Election",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Election.Candidate",
+            "id": 776,
+            "members": [
+              {
+                "constant": false,
+                "id": 771,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "71:7:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 770,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "71:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 773,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "84:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 772,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "84:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 775,
+                "name": "voteCount",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "101:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 774,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "101:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Candidate",
+            "nodeType": "StructDefinition",
+            "scope": 783,
+            "src": "48:72:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 780,
+            "name": "candidates",
+            "nodeType": "VariableDeclaration",
+            "scope": 783,
+            "src": "124:44:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$776_storage_$",
+              "typeString": "mapping(uint256 => struct Election.Candidate)"
+            },
+            "typeName": {
+              "id": 779,
+              "keyType": {
+                "id": 777,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "132:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "124:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$776_storage_$",
+                "typeString": "mapping(uint256 => struct Election.Candidate)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 778,
+                "name": "Candidate",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 776,
+                "src": "140:9:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Candidate_$776_storage_ptr",
+                  "typeString": "struct Election.Candidate"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 782,
+            "name": "candidatesCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 783,
+            "src": "173:27:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 781,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 784,
+        "src": "25:179:1"
+      }
+    ],
+    "src": "0:205:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/khiempham/Project/ethereum-master/ethereum/contracts/Election.sol",
+    "exportedSymbols": {
+      "Election": [
+        783
+      ]
+    },
+    "id": 784,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 769,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 783,
+        "linearizedBaseContracts": [
+          783
+        ],
+        "name": "Election",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Election.Candidate",
+            "id": 776,
+            "members": [
+              {
+                "constant": false,
+                "id": 771,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "71:7:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 770,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "71:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 773,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "84:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 772,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "84:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 775,
+                "name": "voteCount",
+                "nodeType": "VariableDeclaration",
+                "scope": 776,
+                "src": "101:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 774,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "101:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Candidate",
+            "nodeType": "StructDefinition",
+            "scope": 783,
+            "src": "48:72:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 780,
+            "name": "candidates",
+            "nodeType": "VariableDeclaration",
+            "scope": 783,
+            "src": "124:44:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$776_storage_$",
+              "typeString": "mapping(uint256 => struct Election.Candidate)"
+            },
+            "typeName": {
+              "id": 779,
+              "keyType": {
+                "id": 777,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "132:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "124:26:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Candidate_$776_storage_$",
+                "typeString": "mapping(uint256 => struct Election.Candidate)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 778,
+                "name": "Candidate",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 776,
+                "src": "140:9:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Candidate_$776_storage_ptr",
+                  "typeString": "struct Election.Candidate"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 782,
+            "name": "candidatesCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 783,
+            "src": "173:27:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 781,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "173:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 784,
+        "src": "25:179:1"
+      }
+    ],
+    "src": "0:205:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.23+commit.124ca40d.Emscripten.clang"
+  },
+  "networks": {
+    "1337": {
+      "events": {},
+      "links": {},
+      "address": "0x6800497f16439b514a9a6ecac0e4110bde79d157",
+      "transactionHash": "0x2e4c60e64e7d97459090795d48262caa1f687bb7b2d387470e826a93d2dc2dfe"
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-26T12:19:57.062Z"
+}
