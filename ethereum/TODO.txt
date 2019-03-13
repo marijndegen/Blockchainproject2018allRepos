@@ -1,0 +1,1 @@
+//TODO het voterscontract heeft nu een hardcoded adres. Tijdens het compilen geeft de solc compiler een error. Dit adres met hoogstwaarschijnlijk nog worden aangepast naar een rinkeby testnetwerk adres of dergelijk voordat we het product kunnen presenteren op het einde van de sprint. 
