@@ -1,3 +1,0 @@
-Precondities:
-ZOrg dat je bash for windows hebt geinstalleerd.
-Ga met cmd naar de "bin" map en voer het updatemycodeautomatically.bat file uit door de naam simpelweg in de command line te typen
